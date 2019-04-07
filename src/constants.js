@@ -1,1 +1,0 @@
-export const AUTHORISATION = 'AUTHORISATION';
