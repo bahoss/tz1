@@ -25,7 +25,6 @@ const styles = theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    width: '100%',
     color: theme.palette.text.secondary
   }
 });
@@ -38,8 +37,8 @@ class News extends Component {
       <>
         <div className={classes.block}>
           <Paper className={classes.paper}>
-            {news.map(item => (
-              <Card className={classes.card}>
+            {news.map((item, index) => (
+              <Card key={index} className={classes.card}>
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}

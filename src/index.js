@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import News from './News';
 import Auth from './Auth';
@@ -15,15 +15,15 @@ const store = createStore(reducer, composeWithDevTools(applyMiddleware()));
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter basename="/">
       <Header />
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/news" exact component={News} />
-        <Route path="/profile" exact component={Profile} />
-        <Route path="/auth" exact component={Auth} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/news" component={News} />
+        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/auth" component={Auth} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById('root')
 );
