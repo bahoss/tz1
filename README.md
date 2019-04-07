@@ -11,4 +11,4 @@
 
 ✓  оформление
 
-✓  demo (<a href="https://bahoss.github.io/">Ссылка</a>)
+✓  demo (<a href="https://bahoss.github.io/tz1/">Ссылка</a>)
